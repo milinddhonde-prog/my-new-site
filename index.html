@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Ansh Ayurveda – Where Healing Begins | Adipur, Kutch</title>
+<meta name="description" content="Authentic Ayurvedic treatments in Adipur, Kutch by Dr. Jaishree – 30+ years expertise. Panchakarma, women's wellness, massages and holistic healing."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --g:#1a4d44;--gl:#2a6b5c;--gp:#e6efed;--gd:#123730;
+  --cr:#faf7f2;--be:#f2ead8;--bd:#e0d0b4;--bdd:#c8b490;
+  --tx:#1e1e1e;--tm:#5a5a5a;--wh:#ffffff;
+  --fd:'Playfair Display',Georgia,serif;--fb:'Jost',sans-serif;
+  --sh:0 8px 40px rgba(26,77,68,.12);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);color:var(--tx);background:var(--cr);overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 56px;background:rgba(250,247,242,.96);border-bottom:1px solid var(--bd);backdrop-filter:blur(16px);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 4px 28px rgba(26,77,68,.1)}
+.nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none;cursor:pointer}
+.nav-logo-mark{width:44px;height:44px;background:var(--g);border-radius:11px;display:grid;place-items:center;font-size:22px;flex-shrink:0}
+.nav-brand-name{font-family:var(--fd);font-weight:600;font-size:18px;color:var(--g);display:block;line-height:1.2}
+.nav-brand-sub{font-size:11px;color:var(--tm);letter-spacing:.05em}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:400;color:var(--tx);letter-spacing:.02em;position:relative;padding-bottom:3px;transition:color .2s}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1.5px;background:var(--g);transform:scaleX(0);transform-origin:center;transition:transform .25s}
+.nav-links a:hover,.nav-links a.active{color:var(--g)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-ig{width:38px;height:38px;border-radius:9px;border:1.5px solid var(--bd);display:grid;place-items:center;text-decoration:none;color:var(--g);transition:background .2s,border-color .2s}
+.nav-ig:hover{background:var(--g);border-color:var(--g);color:var(--wh)}
+.btn-book{display:inline-flex;align-items:center;gap:8px;background:var(--g);color:var(--wh);padding:11px 22px;border-radius:8px;font-size:13.5px;font-weight:500;text-decoration:none;border:none;cursor:pointer;font-family:var(--fb);transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 3px 12px rgba(26,77,68,.25)}
+.btn-book:hover{background:var(--gl);transform:translateY(-1px);box-shadow:0 6px 20px rgba(26,77,68,.3)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--g);color:var(--g);padding:11px 22px;border-radius:8px;font-size:13.5px;font-weight:500;font-family:var(--fb);text-decoration:none;cursor:pointer;background:transparent;transition:background .2s,color .2s}
+.btn-outline:hover{background:var(--g);color:var(--wh)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--g);border-radius:2px}
+
+/* PAGES */
+.page{display:none;padding-top:76px}.page.active{display:block}
+
+/* HERO */
+.hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:52% 48%;background:var(--be);overflow:hidden}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:80px 60px 80px 80px;animation:slideUp .85s cubic-bezier(.22,1,.36,1) both}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;background:var(--wh);border:1px solid var(--bd);padding:8px 18px;border-radius:50px;font-size:12px;color:var(--tm);letter-spacing:.07em;text-transform:uppercase;font-weight:500;margin-bottom:36px;width:fit-content}
+.hero-dot{width:8px;height:8px;background:var(--g);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+h1.hero-title{font-family:var(--fd);font-size:clamp(44px,5.5vw,72px);font-weight:500;line-height:1.08;color:var(--g);margin-bottom:26px}
+h1.hero-title em{font-style:italic;font-weight:400}
+.hero-desc{font-size:16px;line-height:1.78;color:var(--tm);max-width:430px;margin-bottom:44px;font-weight:300}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-metrics{display:flex;gap:44px;margin-top:60px;padding-top:44px;border-top:1px solid var(--bd)}
+.metric-val{font-family:var(--fd);font-size:40px;font-weight:500;color:var(--g);line-height:1}
+.metric-label{font-size:12px;color:var(--tm);margin-top:5px;letter-spacing:.04em}
+.hero-right{position:relative;overflow:hidden;animation:fadeIn 1.1s ease .25s both}
+.hero-right-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 8s ease}
+.hero-right:hover .hero-right-img{transform:scale(1.04)}
+.hero-right::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(242,234,216,.45) 0%,transparent 40%)}
+.hero-float{position:absolute;bottom:44px;left:-28px;z-index:5;background:var(--wh);border-radius:18px;padding:22px 28px;box-shadow:0 16px 48px rgba(26,77,68,.18);min-width:215px}
+.hf-label{font-size:10px;color:var(--tm);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.hf-name{font-family:var(--fd);font-size:24px;color:var(--g);font-weight:500}
+.hf-sub{font-size:12px;color:var(--tm);margin-top:5px}
+.hf-ig{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--g);font-weight:500;text-decoration:none;margin-top:10px;background:var(--gp);padding:5px 12px;border-radius:50px;transition:background .2s}
+.hf-ig:hover{background:var(--g);color:var(--wh)}
+
+/* SECTION COMMONS */
+.sec-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--g);margin-bottom:12px;font-weight:600}
+.sec-title{font-family:var(--fd);font-size:clamp(30px,3.8vw,52px);font-weight:500;line-height:1.18;color:var(--tx)}
+.sec-title em{color:var(--g);font-style:italic}
+.sec-sub{font-size:16px;color:var(--tm);line-height:1.75;max-width:560px;margin-top:18px;font-weight:300}
+section{padding:100px 80px}
+
+/* IG STRIP */
+.ig-strip{background:var(--g);padding:22px 80px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.ig-strip-left{display:flex;align-items:center;gap:14px}
+.ig-strip-text strong{display:block;font-size:15px;color:var(--wh);font-weight:500}
+.ig-strip-text span{font-size:12px;color:rgba(255,255,255,.65)}
+.ig-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);color:var(--wh);padding:10px 22px;border-radius:50px;font-size:13px;font-weight:500;text-decoration:none;border:1.5px solid rgba(255,255,255,.28);transition:background .2s}
+.ig-pill:hover{background:rgba(255,255,255,.26)}
+
+/* TREATMENT CARDS */
+.sec-treatments{background:var(--cr)}
+.tr-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;flex-wrap:wrap;gap:24px}
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.tc{background:var(--wh);border-radius:18px;overflow:hidden;border:1px solid var(--bd);transition:transform .32s,box-shadow .32s;cursor:pointer}
+.tc:hover{transform:translateY(-8px);box-shadow:0 24px 64px rgba(26,77,68,.14)}
+.tc-img{height:240px;overflow:hidden;position:relative}
+.tc-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.tc:hover .tc-img img{transform:scale(1.06)}
+.tc-body{padding:26px}
+.tc-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}
+.tag{font-size:10px;letter-spacing:.08em;text-transform:uppercase;background:var(--gp);color:var(--g);padding:4px 12px;border-radius:50px;font-weight:600}
+.tag.w{background:#fde8f0;color:#a0345a}
+.tag.p{background:#fff3e0;color:#c0621a}
+.tc-time{font-size:12px;color:var(--tm)}
+.tc-name{font-family:var(--fd);font-size:26px;font-weight:500;color:var(--g);margin-bottom:10px}
+.tc-desc{font-size:14px;color:var(--tm);line-height:1.68;margin-bottom:22px;font-weight:300}
+.tc-footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--be);padding-top:18px}
+.tc-gender{font-size:12px;color:var(--tm)}
+.tc-lnk{font-size:13px;font-weight:500;color:var(--g);text-decoration:none;display:flex;align-items:center;gap:5px;transition:gap .2s}
+.tc-lnk:hover{gap:10px}
+
+/* WOMEN SECTION */
+.sec-women{background:linear-gradient(135deg,#fdf4f8 0%,#faf7f2 100%)}
+.wh{text-align:center;margin-bottom:64px}
+.wh .sec-title em{color:#a0345a}
+.wh .sec-label{color:#a0345a}
+.wg{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.wc{background:var(--wh);border-radius:16px;overflow:hidden;border:1px solid #f0d8e4;transition:transform .3s,box-shadow .3s;cursor:pointer}
+.wc:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(160,52,90,.1)}
+.wc-img{height:200px;overflow:hidden}
+.wc-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s}
+.wc:hover .wc-img img{transform:scale(1.07)}
+.wc-body{padding:20px}
+.wc-name{font-family:var(--fd);font-size:21px;color:#a0345a;margin-bottom:8px}
+.wc-desc{font-size:13px;color:var(--tm);line-height:1.65;font-weight:300}
+.wc-footer{margin-top:16px;padding-top:14px;border-top:1px solid #f0d8e4;display:flex;justify-content:space-between;align-items:center}
+.wc-time{font-size:11px;color:var(--tm)}
+.wc-btn{font-size:12px;font-weight:500;color:#a0345a;background:none;border:none;cursor:pointer;font-family:var(--fb);transition:gap .2s;display:flex;align-items:center;gap:4px}
+.wc-btn:hover{gap:8px}
+
+/* PANCHAKARMA */
+.sec-panch{background:var(--gd)}
+.panch-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.panch-left .sec-label{color:var(--bdd)}
+.panch-left .sec-title{color:var(--wh)}
+.panch-left .sec-title em{color:var(--bdd)}
+.panch-left .sec-sub{color:rgba(255,255,255,.65);max-width:460px}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
+.pi{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:20px}
+.pi-icon{font-size:24px;margin-bottom:10px}
+.pi-name{font-family:var(--fd);font-size:18px;color:var(--wh);margin-bottom:6px}
+.pi-desc{font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.6;font-weight:300}
+.panch-right{position:relative}
+.panch-img{width:100%;border-radius:20px;height:500px;object-fit:cover;display:block}
+.panch-badge{position:absolute;bottom:-20px;right:-20px;background:var(--g);color:var(--wh);border-radius:16px;padding:26px 30px;text-align:center;box-shadow:0 12px 32px rgba(0,0,0,.3)}
+.panch-badge-num{font-family:var(--fd);font-size:48px;font-weight:500;line-height:1}
+.panch-badge-txt{font-size:11px;opacity:.8;margin-top:6px;letter-spacing:.06em}
+
+/* ABOUT */
+.sec-about{background:var(--be)}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-img-col{position:relative}
+.about-img{width:100%;border-radius:20px;height:540px;object-fit:cover;object-position:center top;display:block}
+.about-badge{position:absolute;bottom:-22px;right:-22px;background:var(--g);color:var(--wh);border-radius:16px;padding:26px 30px;text-align:center;box-shadow:var(--sh)}
+.about-badge-num{font-family:var(--fd);font-size:50px;font-weight:500;line-height:1}
+.about-badge-txt{font-size:11px;opacity:.82;margin-top:6px;letter-spacing:.06em}
+.about-list{list-style:none;margin-top:32px;display:flex;flex-direction:column;gap:18px}
+.about-li{display:flex;gap:15px;font-size:15px;color:var(--tm);line-height:1.65;font-weight:300}
+.about-li-ico{width:30px;height:30px;min-width:30px;background:var(--gp);border-radius:50%;display:grid;place-items:center;font-size:14px;margin-top:1px}
+.about-ctas{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap}
+
+/* WHY */
+.sec-why{background:var(--g)}
+.sec-why .sec-label{color:var(--bdd)}
+.sec-why .sec-title{color:var(--wh)}
+.sec-why .sec-title em{color:var(--bdd)}
+.why-center{text-align:center;margin-bottom:60px}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.why-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:36px 28px;text-align:center;transition:background .3s}
+.why-card:hover{background:rgba(255,255,255,.13)}
+.why-ico{width:64px;height:64px;background:rgba(255,255,255,.12);border-radius:16px;display:grid;place-items:center;font-size:28px;margin:0 auto 22px}
+.why-title{font-family:var(--fd);font-size:22px;color:var(--wh);margin-bottom:10px}
+.why-desc{font-size:14px;color:rgba(255,255,255,.62);line-height:1.68;font-weight:300}
+
+/* TESTIMONIALS */
+.sec-testi{background:var(--cr)}
+.testi-center{text-align:center;margin-bottom:56px}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.testi-card{background:var(--wh);border-radius:18px;padding:36px;border:1px solid var(--bd);transition:box-shadow .3s}
+.testi-card:hover{box-shadow:var(--sh)}
+.testi-quote{font-family:var(--fd);font-size:72px;color:var(--gp);line-height:.6;margin-bottom:20px}
+.testi-stars{color:#d4a843;font-size:15px;letter-spacing:3px;margin-bottom:16px}
+.testi-text{font-size:15px;color:var(--tm);line-height:1.75;font-style:italic;margin-bottom:28px;font-weight:300}
+.testi-author{display:flex;align-items:center;gap:14px}
+.testi-av{width:46px;height:46px;border-radius:50%;background:var(--gp);display:grid;place-items:center;font-family:var(--fd);font-size:20px;color:var(--g);font-weight:500;flex-shrink:0}
+.testi-name{font-weight:600;font-size:14px;color:var(--tx)}
+.testi-loc{font-size:12px;color:var(--tm);margin-top:2px}
+
+/* IG SECTION */
+.sec-ig{background:var(--cr);text-align:center}
+.sec-ig .sec-sub{margin:18px auto 48px}
+.ig-feed{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;border-radius:16px;overflow:hidden}
+.ig-item{aspect-ratio:1;overflow:hidden;position:relative;cursor:pointer}
+.ig-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.ig-item:hover img{transform:scale(1.1)}
+.ig-item-ov{position:absolute;inset:0;background:rgba(26,77,68,.6);display:flex;align-items:center;justify-content:center;color:var(--wh);font-size:14px;font-weight:500;opacity:0;transition:opacity .3s}
+.ig-item:hover .ig-item-ov{opacity:1}
+.ig-cta{margin-top:36px;display:flex;justify-content:center}
+.btn-ig{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:var(--wh);padding:13px 28px;border-radius:9px;font-size:14px;font-weight:500;text-decoration:none;transition:opacity .2s,transform .15s;box-shadow:0 4px 16px rgba(220,39,67,.28)}
+.btn-ig:hover{opacity:.9;transform:translateY(-1px)}
+
+/* CONTACT */
+.sec-contact{display:grid;grid-template-columns:1fr 1fr;background:var(--be)}
+.contact-left{padding:80px}
+.contact-items{margin-top:40px;display:flex;flex-direction:column;gap:28px}
+.ci{display:flex;gap:18px;align-items:flex-start}
+.ci-ico{width:48px;height:48px;min-width:48px;background:var(--g);border-radius:12px;display:grid;place-items:center;color:var(--wh);font-size:20px}
+.ci-label{font-size:10px;color:var(--tm);letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:5px}
+.ci-val{font-size:15px;color:var(--tx);font-weight:500;line-height:1.55}
+.ci-val a{color:var(--g);text-decoration:none}
+.contact-right{background:var(--g);padding:80px;display:flex;flex-direction:column;justify-content:center}
+.contact-right .sec-label{color:var(--bdd)}
+.contact-right .sec-title{color:var(--wh);font-size:38px}
+.contact-right .sec-title em{color:var(--bdd)}
+.hours-list{list-style:none;margin-top:32px}
+.hours-li{display:flex;justify-content:space-between;font-size:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.8);font-weight:300}
+.hours-li:last-child{border-bottom:none}
+.hours-day{color:var(--wh);font-weight:500}
+.contact-right .btn-book{margin-top:36px;width:fit-content;background:var(--wh);color:var(--g);box-shadow:none}
+.contact-right .btn-book:hover{background:var(--be)}
+
+/* FOOTER */
+footer{background:#0f1c19;padding:64px 80px 36px}
+.footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:52px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-brand-name{font-family:var(--fd);font-size:26px;color:var(--wh);margin-bottom:4px}
+.footer-brand-tag{font-size:12px;color:rgba(255,255,255,.35);margin-bottom:16px}
+.footer-desc{font-size:14px;color:rgba(255,255,255,.5);line-height:1.75;font-weight:300;margin-bottom:24px}
+.footer-social{display:flex;gap:10px}
+.fsl{width:38px;height:38px;border-radius:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);display:grid;place-items:center;text-decoration:none;color:rgba(255,255,255,.6);font-size:15px;transition:background .2s,color .2s}
+.fsl:hover{background:var(--g);color:var(--wh);border-color:var(--g)}
+.footer-col-title{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:22px;font-weight:600}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:11px}
+.footer-links a{color:rgba(255,255,255,.58);text-decoration:none;font-size:14px;font-weight:300;transition:color .2s}
+.footer-links a:hover{color:var(--wh)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;font-size:12px;color:rgba(255,255,255,.28);flex-wrap:wrap;gap:8px}
+
+/* TREATMENTS PAGE */
+.tp-hero{background:var(--be);padding:80px 80px 56px;text-align:center}
+.tp-hero .sec-sub{margin:16px auto 0}
+.tp-filters{padding:40px 80px 8px;display:flex;gap:10px;flex-wrap:wrap}
+.fb{padding:9px 22px;border-radius:50px;border:1.5px solid var(--bd);background:var(--wh);color:var(--tm);font-size:13px;font-weight:500;cursor:pointer;font-family:var(--fb);transition:all .2s}
+.fb:hover,.fb.active{background:var(--g);border-color:var(--g);color:var(--wh)}
+.fb.fw{border-color:#e8a0bc;color:#a0345a}
+.fb.fw:hover,.fb.fw.active{background:#a0345a;border-color:#a0345a;color:var(--wh)}
+.fb.fp{border-color:#f5c080;color:#c0621a}
+.fb.fp:hover,.fb.fp.active{background:#c0621a;border-color:#c0621a;color:var(--wh)}
+.tp-grid{padding:44px 80px 100px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.tl{background:var(--wh);border-radius:18px;overflow:hidden;border:1px solid var(--bd);transition:transform .3s,box-shadow .3s}
+.tl:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(26,77,68,.12)}
+.tl-img{width:100%;height:228px;object-fit:cover;display:block;transition:transform .45s}
+.tl:hover .tl-img{transform:scale(1.04)}
+.tl-body{padding:28px}
+.tl-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}
+.tl-name{font-family:var(--fd);font-size:27px;color:var(--g);margin-bottom:12px}
+.tl-name.wn{color:#a0345a}.tl-name.pn{color:#c0621a}
+.tl-desc{font-size:14px;color:var(--tm);line-height:1.72;margin-bottom:20px;font-weight:300}
+.bens{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
+.bens li{display:flex;gap:10px;font-size:13.5px;color:var(--tm);align-items:flex-start;font-weight:300}
+.bd{color:var(--g);font-size:12px;margin-top:2px;flex-shrink:0}
+.bd.w{color:#a0345a}.bd.p{color:#c0621a}
+.tl-footer{display:flex;justify-content:space-between;align-items:center;padding-top:20px;border-top:1px solid var(--be)}
+.tl-gender{font-size:12px;color:var(--tm)}
+.book-btn{background:var(--g);color:var(--wh);padding:10px 20px;border-radius:8px;font-size:13px;font-weight:500;font-family:var(--fb);border:none;cursor:pointer;transition:background .2s}
+.book-btn:hover{background:var(--gl)}
+.book-btn.wb{background:#a0345a}.book-btn.wb:hover{background:#8a2a4e}
+.book-btn.pb{background:#c0621a}.book-btn.pb:hover{background:#a5531a}
+
+/* CTA BANNER */
+.cta-banner{background:var(--g);padding:80px;text-align:center;overflow:hidden}
+.cta-banner .sec-label{color:rgba(255,255,255,.5);margin-bottom:12px}
+.cta-banner h2{font-family:var(--fd);font-size:clamp(32px,4.5vw,56px);color:var(--wh);font-weight:500;margin-bottom:18px}
+.cta-banner h2 em{font-style:italic;font-weight:400}
+.cta-banner p{color:rgba(255,255,255,.65);font-size:16px;max-width:500px;margin:0 auto 40px;line-height:1.75;font-weight:300}
+.cta-banner .btn-book{background:var(--wh);color:var(--g);font-size:14px;padding:14px 32px;box-shadow:0 4px 20px rgba(0,0,0,.15)}
+.cta-banner .btn-book:hover{background:var(--be)}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);place-items:center}
+.modal-overlay.open{display:grid}
+.modal{background:var(--wh);border-radius:22px;padding:52px;max-width:500px;width:92%;position:relative;animation:slideUp .3s cubic-bezier(.22,1,.36,1);max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:22px;right:22px;background:var(--be);border:none;border-radius:50%;width:38px;height:38px;cursor:pointer;font-size:18px;display:grid;place-items:center;color:var(--tx);transition:background .2s}
+.modal-close:hover{background:var(--bd)}
+.modal h3{font-family:var(--fd);font-size:33px;color:var(--g);margin-bottom:8px}
+.modal-tagline{font-size:14px;color:var(--tm);margin-bottom:30px;font-weight:300}
+.mf{margin-bottom:18px}
+.mf label{display:block;font-size:11.5px;font-weight:600;letter-spacing:.05em;margin-bottom:7px;color:var(--tx);text-transform:uppercase}
+.mf input,.mf select,.mf textarea{width:100%;padding:13px 16px;border:1.5px solid var(--bd);border-radius:9px;font-family:var(--fb);font-size:14px;color:var(--tx);background:var(--cr);outline:none;transition:border-color .2s}
+.mf input:focus,.mf select:focus,.mf textarea:focus{border-color:var(--g)}
+.mf textarea{resize:none;height:84px;font-weight:300}
+.modal-submit{width:100%;padding:15px;background:var(--g);color:var(--wh);border:none;border-radius:10px;font-family:var(--fb);font-size:15px;font-weight:500;cursor:pointer;transition:background .2s;margin-top:8px}
+.modal-submit:hover{background:var(--gl)}
+.modal-note{font-size:12px;color:var(--tm);text-align:center;margin-top:14px}
+.modal-note a{color:var(--g);text-decoration:none;font-weight:500}
+.modal-div{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--tm);margin:20px 0}
+.modal-div::before,.modal-div::after{content:'';flex:1;height:1px;background:var(--bd)}
+.btn-wa{width:100%;padding:14px;background:#25d366;color:var(--wh);border:none;border-radius:10px;font-family:var(--fb);font-size:15px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;transition:background .2s}
+.btn-wa:hover{background:#20bd5a}
+
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+  .wg{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr;gap:36px}
+  .tg,.tp-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:960px){
+  nav{padding:0 24px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-right .btn-book{display:none}
+  nav.menu-open .nav-links{display:flex;flex-direction:column;gap:0;position:absolute;top:76px;left:0;right:0;background:var(--cr);border-bottom:1px solid var(--bd);padding:12px 24px 20px}
+  nav.menu-open .nav-links li a{padding:12px 0;display:block;border-bottom:1px solid var(--be)}
+  nav.menu-open .nav-right .btn-book{display:inline-flex;margin:12px 24px 0}
+  .hero{grid-template-columns:1fr}
+  .hero-right{height:380px}
+  .hero-float{display:none}
+  .hero-left{padding:60px 28px 52px}
+  section{padding:68px 28px}
+  .about-inner,.panch-inner,.sec-contact{grid-template-columns:1fr}
+  .panch-badge,.about-badge{right:0;bottom:-14px}
+  .contact-left,.contact-right{padding:52px 28px}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-grid{grid-template-columns:1fr}
+  .wg{grid-template-columns:1fr 1fr}
+  .ig-feed{grid-template-columns:repeat(3,1fr)}
+  .ig-strip{padding:18px 28px}
+  footer{padding:52px 28px 28px}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .tp-filters,.tp-hero{padding-left:28px;padding-right:28px}
+  .tp-grid{padding:40px 28px 80px;grid-template-columns:1fr}
+  .tg{grid-template-columns:1fr}
+  .tr-hdr{flex-direction:column;align-items:flex-start}
+  .pg{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .hero-metrics{gap:24px}
+  .wg{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .ig-feed{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo" onclick="goHome()">
+    <div class="nav-logo-mark">🌿</div>
+    <div>
+      <span class="nav-brand-name">Ansh Ayurveda</span>
+      <span class="nav-brand-sub">Where Healing Begins · Adipur, Kutch</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#" class="active" id="nav-home" onclick="goHome();return false;">Home</a></li>
+    <li><a href="#" id="nav-treatments" onclick="goTreatments();return false;">Treatments</a></li>
+    <li><a href="#" onclick="goSec('about-sec');return false;">About</a></li>
+    <li><a href="#" onclick="goSec('contact-sec');return false;">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://www.instagram.com/anshayurveda/" target="_blank" class="nav-ig" title="@anshayurveda">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a href="#" class="btn-book" onclick="openModal();return false;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+      Book Appointment
+    </a>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HOME PAGE -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow"><span class="hero-dot"></span>Health &amp; Rejuvenating Centre</div>
+      <h1 class="hero-title">Ancient <em>Wisdom,</em><br>Modern <em>Healing</em></h1>
+      <p class="hero-desc">Experience authentic Ayurvedic treatments at Ansh Ayurveda, where Dr. Jaishree's three decades of expertise meets traditional healing wisdom. Proudly serving Adipur &amp; Kutch.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn-book" style="padding:14px 30px;font-size:14.5px;" onclick="openModal();return false;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+          Book Your Appointment
+        </a>
+        <a href="#" class="btn-outline" onclick="goTreatments();return false;">Explore Treatments →</a>
+      </div>
+      <div class="hero-metrics">
+        <div><div class="metric-val">30+</div><div class="metric-label">Years Experience</div></div>
+        <div><div class="metric-val">12+</div><div class="metric-label">Therapies</div></div>
+        <div><div class="metric-val">5000+</div><div class="metric-label">Happy Patients</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img class="hero-right-img" src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200&q=85&auto=format&fit=crop" alt="Ayurveda oil massage therapy" loading="eager" crossorigin="anonymous"/>
+      <div class="hero-float">
+        <div class="hf-label">Lead Physician</div>
+        <div class="hf-name">Dr. Jaishree</div>
+        <div class="hf-sub">BAMS · Women's Wellness Specialist</div>
+        <a href="https://www.instagram.com/anshayurveda/" target="_blank" class="hf-ig">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @anshayurveda
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- IG STRIP -->
+  <div class="ig-strip">
+    <div class="ig-strip-left">
+      <div style="font-size:24px">📸</div>
+      <div class="ig-strip-text">
+        <strong>Follow @anshayurveda on Instagram</strong>
+        <span>"Where healing begins! Health &amp; Rejuvenating Centre 🍃" — wellness tips, treatment glimpses &amp; Ayurveda wisdom</span>
+      </div>
+    </div>
+    <a href="https://www.instagram.com/anshayurveda/" target="_blank" class="ig-pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      @anshayurveda
+    </a>
+  </div>
+
+  <!-- FEATURED TREATMENTS -->
+  <section class="sec-treatments">
+    <div class="tr-hdr">
+      <div>
+        <div class="sec-label">Our Therapies</div>
+        <h2 class="sec-title">Signature <em>Treatments</em></h2>
+        <p class="sec-sub">Carefully curated Ayurvedic procedures designed for holistic wellness, available for both men and women.</p>
+      </div>
+      <a href="#" class="btn-outline" onclick="goTreatments();return false;">View All Treatments →</a>
+    </div>
+    <div class="tg">
+      <div class="tc" onclick="goTreatments()">
+        <div class="tc-img"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=700&q=80&auto=format&fit=crop" alt="Foot Massage" loading="lazy"/></div>
+        <div class="tc-body">
+          <div class="tc-meta"><span class="tag">Massage</span><span class="tc-time">45 mins</span></div>
+          <div class="tc-name">Foot Massage</div>
+          <p class="tc-desc">Traditional Ayurvedic foot therapy stimulating marma points to promote relaxation, enhance circulation and relieve deep-rooted stress.</p>
+          <div class="tc-footer"><span class="tc-gender">Both Men &amp; Women</span><a class="tc-lnk" href="#" onclick="goTreatments();return false;">Learn More →</a></div>
+        </div>
+      </div>
+      <div class="tc" onclick="goTreatments()">
+        <div class="tc-img"><img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?w=700&q=80&auto=format&fit=crop" alt="Shiro Dhara" loading="lazy"/></div>
+        <div class="tc-body">
+          <div class="tc-meta"><span class="tag">Specialised</span><span class="tc-time">60 mins</span></div>
+          <div class="tc-name">Shiro Dhara</div>
+          <p class="tc-desc">Warm medicated oil poured continuously on the forehead — profoundly calming for the mind, migraines and nervous system.</p>
+          <div class="tc-footer"><span class="tc-gender">Both Men &amp; Women</span><a class="tc-lnk" href="#" onclick="goTreatments();return false;">Learn More →</a></div>
+        </div>
+      </div>
+      <div class="tc" onclick="goTreatments()">
+        <div class="tc-img"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=700&q=80&auto=format&fit=crop" alt="Full Body Massage" loading="lazy"/></div>
+        <div class="tc-body">
+          <div class="tc-meta"><span class="tag">Massage</span><span class="tc-time">90 mins</span></div>
+          <div class="tc-name">Full Body Massage</div>
+          <p class="tc-desc">Complete Ayurvedic body massage using warm herbal oils — deeply relaxing, therapeutic and balancing for the whole body.</p>
+          <div class="tc-footer"><span class="tc-gender">Both Men &amp; Women</span><a class="tc-lnk" href="#" onclick="goTreatments();return false;">Learn More →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WOMEN'S WELLNESS -->
+  <section class="sec-women">
+    <div class="wh">
+      <div class="sec-label">Women's Wellness</div>
+      <h2 class="sec-title">Healing <em>Designed for Her</em></h2>
+      <p class="sec-sub" style="text-align:center;margin:18px auto 0;max-width:560px">Dr. Jaishree's 30-year specialisation in women's health — therapies for hormonal balance, stress, beauty &amp; postpartum recovery.</p>
+    </div>
+    <div class="wg">
+      <div class="wc" onclick="openModal()"><div class="wc-img"><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80&auto=format&fit=crop" alt="Face Massage" loading="lazy"/></div><div class="wc-body"><div class="wc-name">Face Massage</div><p class="wc-desc">Rejuvenating Ayurvedic facial using herbal oils to restore natural glow, reduce puffiness and release facial tension.</p><div class="wc-footer"><span class="wc-time">30 mins</span><button class="wc-btn" onclick="openModal()">Book Now →</button></div></div></div>
+      <div class="wc" onclick="openModal()"><div class="wc-img"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80&auto=format&fit=crop" alt="Abhyang" loading="lazy"/></div><div class="wc-body"><div class="wc-name">Abhyang</div><p class="wc-desc">Synchronised warm oil massage balancing all doshas. Nourishes skin, calms nerves and relieves chronic fatigue.</p><div class="wc-footer"><span class="wc-time">75 mins</span><button class="wc-btn" onclick="openModal()">Book Now →</button></div></div></div>
+      <div class="wc" onclick="openModal()"><div class="wc-img"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80&auto=format&fit=crop" alt="Valuka Potli" loading="lazy"/></div><div class="wc-body"><div class="wc-name">Valuka Potli</div><p class="wc-desc">Warm herbal sand bolus therapy easing joint pain, reducing inflammation and deeply relaxing muscles.</p><div class="wc-footer"><span class="wc-time">60 mins</span><button class="wc-btn" onclick="openModal()">Book Now →</button></div></div></div>
+      <div class="wc" onclick="openModal()"><div class="wc-img"><img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?w=600&q=80&auto=format&fit=crop" alt="Shiro Dhara" loading="lazy"/></div><div class="wc-body"><div class="wc-name">Shiro Dhara</div><p class="wc-desc">Continuous warm oil on the forehead calming hormonal anxiety, migraines and insomnia naturally.</p><div class="wc-footer"><span class="wc-time">60 mins</span><button class="wc-btn" onclick="openModal()">Book Now →</button></div></div></div>
+      <div class="wc" onclick="openModal()"><div class="wc-img"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80&auto=format&fit=crop" alt="Full Body Massage" loading="lazy"/></div><div class="wc-body"><div class="wc-name">Full Body Massage</div><p class="wc-desc">Deep therapeutic massage with medicated oils for women's wellness and postpartum recovery.</p><div class="wc-footer"><span class="wc-time">90 mins</span><button class="wc-btn" onclick="openModal()">Book Now →</button></div></div></div>
+      <div class="wc" onclick="openModal()"><div class="wc-img"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80&auto=format&fit=crop" alt="Udwarthanam" loading="lazy"/></div><div class="wc-body"><div class="wc-name">Udwarthanam</div><p class="wc-desc">Invigorating herbal powder massage boosting circulation, aiding weight management and nourishing skin.</p><div class="wc-footer"><span class="wc-time">60 mins</span><button class="wc-btn" onclick="openModal()">Book Now →</button></div></div></div>
+      <div class="wc" onclick="openModal()"><div class="wc-img"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80&auto=format&fit=crop" alt="Kati Basti" loading="lazy"/></div><div class="wc-body"><div class="wc-name">Kati Basti</div><p class="wc-desc">Warm medicated oil over the lower back — effective for back pain, sciatica and menstrual discomfort.</p><div class="wc-footer"><span class="wc-time">45 mins</span><button class="wc-btn" onclick="openModal()">Book Now →</button></div></div></div>
+      <div class="wc" onclick="openModal()"><div class="wc-img"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80&auto=format&fit=crop" alt="Mukha Lepam" loading="lazy"/></div><div class="wc-body"><div class="wc-name">Mukha Lepam</div><p class="wc-desc">Ayurvedic herbal face mask that cleanses skin, reduces pigmentation and restores natural radiance.</p><div class="wc-footer"><span class="wc-time">40 mins</span><button class="wc-btn" onclick="openModal()">Book Now →</button></div></div></div>
+    </div>
+    <div style="text-align:center;margin-top:48px"><a href="#" class="btn-book" style="padding:14px 32px;font-size:14.5px;" onclick="goTreatments();return false;">View All Women's Treatments →</a></div>
+  </section>
+
+  <!-- PANCHAKARMA -->
+  <section class="sec-panch">
+    <div class="panch-inner">
+      <div class="panch-left">
+        <div class="sec-label">Detox &amp; Rejuvenate</div>
+        <h2 class="sec-title">Panchakarma<br><em>The Five Purifications</em></h2>
+        <p class="sec-sub">Ayurveda's most powerful detoxification therapy — a complete mind-body cleanse that removes toxins, restores balance and revitalises every cell.</p>
+        <div class="pg">
+          <div class="pi"><div class="pi-icon">💧</div><div class="pi-name">Vamana</div><p class="pi-desc">Therapeutic emesis to eliminate Kapha toxins and respiratory congestion.</p></div>
+          <div class="pi"><div class="pi-icon">🌿</div><div class="pi-name">Virechana</div><p class="pi-desc">Purgation therapy for Pitta disorders and deep liver cleansing.</p></div>
+          <div class="pi"><div class="pi-icon">✨</div><div class="pi-name">Basti</div><p class="pi-desc">Medicated enema — the most powerful of the five for Vata balance.</p></div>
+          <div class="pi"><div class="pi-icon">🌸</div><div class="pi-name">Nasya</div><p class="pi-desc">Nasal herbal oils for sinus, migraine and mental clarity.</p></div>
+        </div>
+        <div style="margin-top:36px"><a href="#" class="btn-book" style="padding:14px 30px;font-size:14px;" onclick="openModal();return false;">Enquire About Panchakarma</a></div>
+      </div>
+      <div class="panch-right">
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&q=85&auto=format&fit=crop" alt="Panchakarma Ayurveda therapy" class="panch-img" loading="lazy"/>
+        <div class="panch-badge"><div class="panch-badge-num">30+</div><div class="panch-badge-txt">Years of Healing</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec-about" id="about-sec">
+    <div class="about-inner">
+      <div class="about-img-col">
+        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=900&q=85&auto=format&fit=crop" alt="Ayurveda consultation at Ansh Ayurveda" class="about-img" loading="lazy"/>
+        <div class="about-badge"><div class="about-badge-num">30+</div><div class="about-badge-txt">Years of Healing</div></div>
+      </div>
+      <div>
+        <div class="sec-label">About the Doctor</div>
+        <h2 class="sec-title">Meet <em>Dr. Jaishree</em></h2>
+        <p class="sec-sub">A pioneer in Ayurvedic medicine and women's wellness, Dr. Jaishree has dedicated her life to bringing ancient healing wisdom to modern lives at Ansh Ayurveda, Adipur.</p>
+        <ul class="about-list">
+          <li><div class="about-li-ico">🎓</div>Qualified BAMS with deep specialisation in women's health and Panchakarma therapies.</li>
+          <li><div class="about-li-ico">🌿</div>Each treatment personally curated using authentic Ayurvedic formulations and time-tested methods.</li>
+          <li><div class="about-li-ico">❤️</div>Specialises in women's wellness — hormonal balance, stress relief and postpartum recovery.</li>
+          <li><div class="about-li-ico">📍</div>Located above Shivam's Women's Hospital, Ward 2B, Adipur — heart of Kutch's healing community.</li>
+          <li><div class="about-li-ico">🏆</div>Trusted by 5,000+ patients across Kutch and Gujarat for safe, effective Ayurvedic care.</li>
+        </ul>
+        <div class="about-ctas">
+          <a href="#" class="btn-book" style="padding:13px 28px;" onclick="openModal();return false;">Book a Consultation</a>
+          <a href="https://www.instagram.com/anshayurveda/" target="_blank" class="btn-outline">Follow on Instagram →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="sec-why">
+    <div class="why-center"><div class="sec-label">Why Choose Us</div><h2 class="sec-title">Healing the <em>Ansh</em> Way</h2></div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-ico">🌿</div><div class="why-title">100% Natural</div><p class="why-desc">Pure natural herbal oils and ingredients — no chemicals, no synthetic additives, zero side effects.</p></div>
+      <div class="why-card"><div class="why-ico">👩‍⚕️</div><div class="why-title">Expert Hands</div><p class="why-desc">Treatments administered by trained therapists under Dr. Jaishree's direct personal supervision.</p></div>
+      <div class="why-card"><div class="why-ico">🔒</div><div class="why-title">Private &amp; Safe</div><p class="why-desc">A comfortable, private environment ensuring complete dignity and comfort for every patient.</p></div>
+      <div class="why-card"><div class="why-ico">✨</div><div class="why-title">Personalised Care</div><p class="why-desc">Every plan tailored to your unique body type (Prakriti) and personal health goals.</p></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="sec-testi">
+    <div class="testi-center"><div class="sec-label">Patient Stories</div><h2 class="sec-title">Voices of <em>Healing</em></h2></div>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="testi-quote">"</div><div class="testi-stars">★★★★★</div><p class="testi-text">Dr. Jaishree's Shiro Dhara completely transformed my chronic migraine condition. After just five sessions I feel like a new person. Truly life-changing.</p><div class="testi-author"><div class="testi-av">P</div><div><div class="testi-name">Priya Mehta</div><div class="testi-loc">Adipur, Kutch</div></div></div></div>
+      <div class="testi-card"><div class="testi-quote">"</div><div class="testi-stars">★★★★★</div><p class="testi-text">The Abhyang full body massage is incredible. Two years of visits and the quality, care and expertise of Dr. Jaishree is simply unmatched in Gujarat.</p><div class="testi-author"><div class="testi-av">R</div><div><div class="testi-name">Rajesh Shah</div><div class="testi-loc">Gandhidham</div></div></div></div>
+      <div class="testi-card"><div class="testi-quote">"</div><div class="testi-stars">★★★★★</div><p class="testi-text">As a working mother, the Valuka Potli treatment is exactly what I needed. The centre is beautiful, hygienic and the staff are so warm and genuinely caring.</p><div class="testi-author"><div class="testi-av">S</div><div><div class="testi-name">Sunita Patel</div><div class="testi-loc">Adipur</div></div></div></div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM FEED -->
+  <section class="sec-ig">
+    <div class="sec-label">Instagram</div>
+    <h2 class="sec-title" style="max-width:480px;margin:0 auto">Follow <em>@anshayurveda</em></h2>
+    <p class="sec-sub" style="text-align:center;margin:18px auto 48px;max-width:520px">"Where healing begins! Health &amp; Rejuvenating Centre 🍃" — follow us for Ayurveda wisdom, treatment glimpses &amp; wellness tips.</p>
+    <div class="ig-feed">
+      <div class="ig-item"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=500&q=75&auto=format&fit=crop&crop=center" alt="Ayurveda treatment" loading="lazy"/><div class="ig-item-ov">View Post</div></div>
+      <div class="ig-item"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&q=75&auto=format&fit=crop&crop=center" alt="Oil massage" loading="lazy"/><div class="ig-item-ov">View Post</div></div>
+      <div class="ig-item"><img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?w=500&q=75&auto=format&fit=crop&crop=center" alt="Shiro Dhara" loading="lazy"/><div class="ig-item-ov">View Post</div></div>
+      <div class="ig-item"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=500&q=75&auto=format&fit=crop&crop=center" alt="Foot massage" loading="lazy"/><div class="ig-item-ov">View Post</div></div>
+      <div class="ig-item"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&q=75&auto=format&fit=crop&crop=center" alt="Wellness treatment" loading="lazy"/><div class="ig-item-ov">View Post</div></div>
+    </div>
+    <div class="ig-cta">
+      <a href="https://www.instagram.com/anshayurveda/" target="_blank" class="btn-ig">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Follow @anshayurveda on Instagram
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <div class="sec-contact" id="contact-sec">
+    <div class="contact-left">
+      <div class="sec-label">Find Us</div>
+      <h2 class="sec-title">Visit <em>Ansh</em><br>Ayurveda</h2>
+      <div class="contact-items">
+        <div class="ci"><div class="ci-ico">📞</div><div><div class="ci-label">Phone</div><div class="ci-val"><a href="tel:09925542424">099255 42424</a></div></div></div>
+        <div class="ci"><div class="ci-ico">📍</div><div><div class="ci-label">Address</div><div class="ci-val">Plot 439, Above Shivam's Women's Hospital,<br>Ward 2B, Adipur, Gandhidham,<br>Gujarat – 370205</div></div></div>
+        <div class="ci"><div class="ci-ico">📸</div><div><div class="ci-label">Instagram</div><div class="ci-val"><a href="https://www.instagram.com/anshayurveda/" target="_blank">@anshayurveda</a></div></div></div>
+        <div class="ci"><div class="ci-ico">🗺️</div><div><div class="ci-label">Directions</div><div class="ci-val"><a href="https://maps.google.com/?q=Ansh+Ayurveda+Adipur+Kutch+Gujarat" target="_blank">Open in Google Maps →</a></div></div></div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="sec-label">Clinic Hours</div>
+      <h2 class="sec-title">Opening <em>Hours</em></h2>
+      <ul class="hours-list">
+        <li class="hours-li"><span class="hours-day">Monday – Friday</span><span>9:00 AM – 8:00 PM</span></li>
+        <li class="hours-li"><span class="hours-day">Saturday</span><span>9:00 AM – 6:00 PM</span></li>
+        <li class="hours-li"><span class="hours-day">Sunday</span><span>9:00 AM – 6:00 PM</span></li>
+      </ul>
+      <a href="#" class="btn-book" onclick="openModal();return false;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+        Book Appointment Now
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div style="display:flex;align-items:center;gap:13px;margin-bottom:16px">
+          <div style="width:42px;height:42px;background:var(--g);border-radius:10px;display:grid;place-items:center;font-size:20px;flex-shrink:0">🌿</div>
+          <div><div class="footer-brand-name">Ansh Ayurveda</div><div class="footer-brand-tag">Where Healing Begins · Adipur, Kutch</div></div>
+        </div>
+        <p class="footer-desc">Traditional Ayurvedic wellness centre offering authentic treatments under the guidance of Dr. Jaishree, specialising in holistic health and women's wellness.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/anshayurveda/" target="_blank" class="fsl" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="tel:09925542424" class="fsl">📞</a>
+          <a href="https://maps.google.com/?q=Ansh+Ayurveda+Adipur" target="_blank" class="fsl">📍</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="goHome();return false;">Home</a></li>
+          <li><a href="#" onclick="goTreatments();return false;">Our Treatments</a></li>
+          <li><a href="#" onclick="goSec('about-sec');return false;">About Dr. Jaishree</a></li>
+          <li><a href="#" onclick="goSec('contact-sec');return false;">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Treatments</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="goTreatments();return false;">Panchakarma</a></li>
+          <li><a href="#" onclick="goTreatments();return false;">Shiro Dhara</a></li>
+          <li><a href="#" onclick="goTreatments();return false;">Abhyang</a></li>
+          <li><a href="#" onclick="goTreatments();return false;">Women's Wellness</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:09925542424">📞 099255 42424</a></li>
+          <li><a href="https://www.instagram.com/anshayurveda/" target="_blank">📸 @anshayurveda</a></li>
+          <li><a href="https://maps.google.com/?q=Ansh+Ayurveda+Adipur" target="_blank">📍 Adipur, Gujarat</a></li>
+          <li><a href="#">⏰ Mon–Sun: 9 AM – 8 PM</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ansh Ayurveda. All rights reserved.</span>
+      <span>Crafted with 🌿 for holistic healing · Adipur, Kutch</span>
+    </div>
+  </footer>
+</div><!-- /home -->
+
+<!-- TREATMENTS PAGE -->
+<div class="page" id="page-treatments">
+  <div class="tp-hero">
+    <div class="sec-label" style="text-align:center">All Therapies</div>
+    <h1 class="sec-title">Our <em>Treatments</em></h1>
+    <p class="sec-sub" style="text-align:center;max-width:560px;margin:16px auto 0">Every treatment personally curated by Dr. Jaishree. Filter to find your perfect therapy.</p>
+  </div>
+  <div class="tp-filters">
+    <button class="fb active" onclick="filterT('all',this)">All Treatments</button>
+    <button class="fb" onclick="filterT('massage',this)">Massages</button>
+    <button class="fb" onclick="filterT('specialised',this)">Specialised</button>
+    <button class="fb fw" onclick="filterT('women',this)">Women's Wellness</button>
+    <button class="fb fp" onclick="filterT('panchakarma',this)">Panchakarma</button>
+  </div>
+  <div class="tp-grid" id="tgrid">
+
+    <div class="tl" data-cat="massage"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=700&q=80&auto=format&fit=crop" alt="Foot Massage" class="tl-img" loading="lazy"/><div class="tl-body"><div class="tl-meta"><span class="tag">Massage</span><span class="tc-time">45 mins</span></div><div class="tl-name">Foot Massage</div><p class="tl-desc">Traditional Ayurvedic foot therapy stimulating marma points for deep relaxation, circulation and lasting stress relief.</p><ul class="bens"><li><span class="bd">✦</span>Relieves stress and anxiety</li><li><span class="bd">✦</span>Improves blood circulation</li><li><span class="bd">✦</span>Better sleep quality</li></ul><div class="tl-footer"><span class="tl-gender">Both Men &amp; Women</span><button class="book-btn" onclick="openModal()">Book Now</button></div></div></div>
+
+    <div class="tl" data-cat="massage women"><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=700&q=80&auto=format&fit=crop" alt="Face Massage" class="tl-img" loading="lazy"/><div class="tl-body"><div class="tl-meta"><span class="tag w">Women's</span><span class="tc-time">30 mins</span></div><div class="tl-name wn">Face Massage</div><p class="tl-desc">Rejuvenating facial massage using Ayurvedic techniques and pure herbal oils to promote natural glow and relieve facial tension.</p><ul class="bens"><li><span class="bd w">✦</span>Natural skin glow</li><li><span class="bd w">✦</span>Reduces puffiness &amp; fine lines</li><li><span class="bd w">✦</span>Relieves facial tension</li></ul><div class="tl-footer"><span class="tl-gender">Both Men &amp; Women</span><button class="book-btn wb" onclick="openModal()">Book Now</button></div></div></div>
+
+    <div class="tl" data-cat="massage"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=700&q=80&auto=format&fit=crop" alt="Full Body Massage" class="tl-img" loading="lazy"/><div class="tl-body"><div class="tl-meta"><span class="tag">Massage</span><span class="tc-time">90 mins</span></div><div class="tl-name">Full Body Massage</div><p class="tl-desc">Complete Ayurvedic body massage using warm herbal oils — deeply relaxing and balancing for the entire body and all three doshas.</p><ul class="bens"><li><span class="bd">✦</span>Full body detoxification</li><li><span class="bd">✦</span>Muscle pain relief</li><li><span class="bd">✦</span>Dosha balance &amp; rejuvenation</li></ul><div class="tl-footer"><span class="tl-gender">Both Men &amp; Women</span><button class="book-btn" onclick="openModal()">Book Now</button></div></div></div>
+
+    <div class="tl" data-cat="specialised women"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=700&q=80&auto=format&fit=crop" alt="Valuka Potli" class="tl-img" loading="lazy"/><div class="tl-body"><div class="tl-meta"><span class="tag">Specialised</span><span class="tc-time">60 mins</span></div><div class="tl-name">Valuka Potli</div><p class="tl-desc">Warm medicated sand bolus therapy — heated herbal pouches applied rhythmically for joint pain, stiffness and arthritis relief.</p><ul class="bens"><li><span class="bd">✦</span>Joint pain &amp; stiffness relief</li><li><span class="bd">✦</span>Reduces inflammation</li><li><span class="bd">✦</span>Improves flexibility</li></ul><div class="tl-footer"><span class="tl-gender">Both Men &amp; Women</span><button class="book-btn" onclick="openModal()">Book Now</button></div></div></div>
+
+    <div class="tl" data-cat="specialised massage women"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=700&q=80&auto=format&fit=crop" alt="Abhyang" class="tl-img" loading="lazy"/><div class="tl-body"><div class="tl-meta"><span class="tag w">Women's</span><span class="tc-time">75 mins</span></div><div class="tl-name wn">Abhyang</div><p class="tl-desc">The cornerstone of Ayurvedic self-care — synchronised full-body warm oil massage for complete dosha balance and deep healing.</p><ul class="bens"><li><span class="bd w">✦</span>Deep nervous system relaxation</li><li><span class="bd w">✦</span>Lymphatic drainage</li><li><span class="bd w">✦</span>Skin nourishment &amp; glow</li></ul><div class="tl-footer"><span class="tl-gender">Both Men &amp; Women</span><button class="book-btn wb" onclick="openModal()">Book Now</button></div></div></div>
+
+    <div class="tl" data-cat="specialised women"><img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?w=700&q=80&auto=format&fit=crop" alt="Shiro Dhara" class="tl-img" loading="lazy"/><div class="tl-body"><div class="tl-meta"><span class="tag">Specialised</span><span class="tc-time">60 mins</span></div><div class="tl-name">Shiro Dhara</div><p class="tl-desc">Continuous stream of warm medicated oil on the forehead — profoundly calming the mind, relieving migraines and restoring nervous balance.</p><ul class="bens"><li><span class="bd">✦</span>Relieves migraines &amp; headaches</li><li><span class="bd">✦</span>Reduces anxiety &amp; insomnia</li><li><span class="bd">✦</span>Improves memory &amp; focus</li></ul><div class="tl-footer"><span class="tl-gender">Both Men &amp; Women</span><button class="book-btn" onclick="openModal()">Book Now</button></div></div></div>
+
+    <div class="tl" data-cat="women specialised"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=700&q=80&auto=format&fit=crop" alt="Udwarthanam" class="tl-img" loading="lazy"/><div class="tl-body"><div class="tl-meta"><span class="tag w">Women's</span><span class="tc-time">60 mins</span></div><div class="tl-name wn">Udwarthanam</div><p class="tl-desc">Invigorating herbal powder massage boosting circulation, aiding weight management and leaving skin deeply nourished and glowing.</p><ul class="bens"><li><span class="bd w">✦</span>Weight management support</li><li><span class="bd w">✦</span>Improves skin texture</li><li><span class="bd w">✦</span>Boosts lymphatic circulation</li></ul><div class="tl-footer"><span class="tl-gender">Women Recommended</span><button class="book-btn wb" onclick="openModal()">Book Now</button></div></div></div>
+
+    <div class="tl" data-cat="women specialised"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&q=80&auto=format&fit=crop" alt="Kati Basti" class="tl-img" loading="lazy"/><div class="tl-body"><div class="tl-meta"><span class="tag w">Women's</span><span class="tc-time">45 mins</span></div><div class="tl-name wn">Kati Basti</div><p class="tl-desc">Warm medicated oil retained over the lower back — effective for back pain, sciatica and menstrual discomfort.</p><ul class="bens"><li><span class="bd w">✦</span>Lower back pain relief</li><li><span class="bd w">✦</span>Menstrual discomfort relief</li><li><span class="bd w">✦</span>Sciatica &amp; spinal health</li></ul><div class="tl-footer"><span class="tl-gender">Women Recommended</span><button class="book-btn wb" onclick="openModal()">Book Now</button></div></div></div>
+
+    <div class="tl" data-cat="women"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=700&q=80&auto=format&fit=crop" alt="Mukha Lepam" class="tl-img" loading="lazy"/><div class="tl-body"><div class="tl-meta"><span class="tag w">Women's</span><span class="tc-time">40 mins</span></div><div class="tl-name wn">Mukha Lepam</div><p class="tl-desc">Ayurvedic herbal face mask that cleanses skin, reduces pigmentation, treats acne and restores natural radiance.</p><ul class="bens"><li><span class="bd w">✦</span>Treats pigmentation &amp; acne</li><li><span class="bd w">✦</span>Deep skin cleansing</li><li><span class="bd w">✦</span>Natural radiance restoration</li></ul><div class="tl-footer"><span class="tl-gender">Women Recommended</span><button class="book-btn wb" onclick="openModal()">Book Now</button></div></div></div>
+
+    <div class="tl" data-cat="panchakarma"><img src="https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?w=700&q=80&auto=format&fit=crop" alt="Vamana" class="tl-img" loading="lazy"/><div class="tl-body"><div class="tl-meta"><span class="tag p">Panchakarma</span><span class="tc-time">Multi-day</span></div><div class="tl-name pn">Vamana</div><p class="tl-desc">Therapeutic emesis — the first Panchakarma purification. Eliminates Kapha toxins, clears respiratory congestion and restores lung health.</p><ul class="bens"><li><span class="bd p">✦</span>Kapha detoxification</li><li><span class="bd p">✦</span>Respiratory health</li><li><span class="bd p">✦</span>Skin disorder treatment</li></ul><div class="tl-footer"><span class="tl-gender">Both Men &amp; Women</span><button class="book-btn pb" onclick="openModal()">Enquire</button></div></div></div>
+
+    <div class="tl" data-cat="panchakarma"><img src="https://images.unsplash.com/photo-1611241893603-3c359704e0ee?w=700&q=80&auto=format&fit=crop" alt="Virechana" class="tl-img" loading="lazy"/><div class="tl-body"><div class="tl-meta"><span class="tag p">Panchakarma</span><span class="tc-time">Multi-day</span></div><div class="tl-name pn">Virechana</div><p class="tl-desc">Purgation therapy targeting Pitta disorders — deep liver cleansing, skin conditions and digestive health through herbal formulations.</p><ul class="bens"><li><span class="bd p">✦</span>Liver &amp; digestive cleanse</li><li><span class="bd p">✦</span>Pitta balance</li><li><span class="bd p">✦</span>Skin health improvement</li></ul><div class="tl-footer"><span class="tl-gender">Both Men &amp; Women</span><button class="book-btn pb" onclick="openModal()">Enquire</button></div></div></div>
+
+    <div class="tl" data-cat="panchakarma"><img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?w=700&q=80&auto=format&fit=crop" alt="Nasya" class="tl-img" loading="lazy"/><div class="tl-body"><div class="tl-meta"><span class="tag p">Panchakarma</span><span class="tc-time">30 mins</span></div><div class="tl-name pn">Nasya</div><p class="tl-desc">Nasal medicated oil therapy — effective for chronic sinusitis, migraines, hair loss, premature greying and mental clarity.</p><ul class="bens"><li><span class="bd p">✦</span>Sinus &amp; migraine relief</li><li><span class="bd p">✦</span>Hair health &amp; greying</li><li><span class="bd p">✦</span>Mental clarity &amp; focus</li></ul><div class="tl-footer"><span class="tl-gender">Both Men &amp; Women</span><button class="book-btn pb" onclick="openModal()">Book Now</button></div></div></div>
+
+    <div class="tl" data-cat="panchakarma"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=700&q=80&auto=format&fit=crop" alt="Basti Karma" class="tl-img" loading="lazy"/><div class="tl-body"><div class="tl-meta"><span class="tag p">Panchakarma</span><span class="tc-time">Multi-day</span></div><div class="tl-name pn">Basti Karma</div><p class="tl-desc">Medicated enema — the most powerful Panchakarma treatment for Vata disorders, constipation, neurological conditions and arthritis.</p><ul class="bens"><li><span class="bd p">✦</span>Vata dosha balance</li><li><span class="bd p">✦</span>Neurological benefits</li><li><span class="bd p">✦</span>Arthritis &amp; joint relief</li></ul><div class="tl-footer"><span class="tl-gender">Both Men &amp; Women</span><button class="book-btn pb" onclick="openModal()">Enquire</button></div></div></div>
+
+  </div>
+
+  <div class="cta-banner">
+    <div class="sec-label">Ready to Begin?</div>
+    <h2>Begin Your <em>Healing Journey</em></h2>
+    <p>Experience authentic Ayurvedic treatments curated by Dr. Jaishree with 30+ years of expertise. Adipur's most trusted wellness centre.</p>
+    <a href="#" class="btn-book" onclick="openModal();return false;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+      Book Your Appointment
+    </a>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div style="display:flex;align-items:center;gap:13px;margin-bottom:16px"><div style="width:42px;height:42px;background:var(--g);border-radius:10px;display:grid;place-items:center;font-size:20px;flex-shrink:0">🌿</div><div><div class="footer-brand-name">Ansh Ayurveda</div><div class="footer-brand-tag">Where Healing Begins · Adipur, Kutch</div></div></div>
+        <p class="footer-desc">Traditional Ayurvedic wellness centre offering authentic treatments under the guidance of Dr. Jaishree.</p>
+        <div class="footer-social"><a href="https://www.instagram.com/anshayurveda/" target="_blank" class="fsl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="tel:09925542424" class="fsl">📞</a></div>
+      </div>
+      <div><div class="footer-col-title">Navigation</div><ul class="footer-links"><li><a href="#" onclick="goHome();return false;">Home</a></li><li><a href="#" onclick="goTreatments();return false;">All Treatments</a></li><li><a href="#" onclick="openModal();return false;">Book Appointment</a></li></ul></div>
+      <div><div class="footer-col-title">Contact</div><ul class="footer-links"><li><a href="tel:09925542424">📞 099255 42424</a></li><li><a href="https://www.instagram.com/anshayurveda/" target="_blank">📸 @anshayurveda</a></li><li><a href="https://maps.google.com/?q=Ansh+Ayurveda+Adipur" target="_blank">📍 Adipur, Gujarat</a></li></ul></div>
+      <div><div class="footer-col-title">Hours</div><ul class="footer-links"><li><a href="#">Mon–Fri: 9 AM – 8 PM</a></li><li><a href="#">Sat–Sun: 9 AM – 6 PM</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Ansh Ayurveda. All rights reserved.</span><span>Crafted with 🌿 · Adipur, Kutch</span></div>
+  </footer>
+</div><!-- /treatments -->
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3>Book Appointment</h3>
+    <p class="modal-tagline">We confirm within 2 hours. Or call us directly: <a href="tel:09925542424"><strong>099255 42424</strong></a></p>
+    <div class="mf"><label>Your Name</label><input type="text" placeholder="Full name"/></div>
+    <div class="mf"><label>Phone Number</label><input type="tel" placeholder="+91 98765 43210"/></div>
+    <div class="mf"><label>Treatment</label>
+      <select>
+        <option value="">Select a treatment</option>
+        <optgroup label="Massages"><option>Foot Massage (45 mins)</option><option>Face Massage (30 mins)</option><option>Full Body Massage (90 mins)</option></optgroup>
+        <optgroup label="Specialised"><option>Abhyang (75 mins)</option><option>Shiro Dhara (60 mins)</option><option>Valuka Potli (60 mins)</option></optgroup>
+        <optgroup label="Women's Wellness"><option>Udwarthanam (60 mins)</option><option>Kati Basti (45 mins)</option><option>Mukha Lepam (40 mins)</option></optgroup>
+        <optgroup label="Panchakarma"><option>Nasya (30 mins)</option><option>Vamana – Consultation required</option><option>Virechana – Consultation required</option><option>Basti Karma – Consultation required</option></optgroup>
+        <option>Not sure – need consultation</option>
+      </select>
+    </div>
+    <div class="mf"><label>Preferred Date &amp; Time</label><input type="datetime-local"/></div>
+    <div class="mf"><label>Message (Optional)</label><textarea placeholder="Any health concerns or questions for Dr. Jaishree..."></textarea></div>
+    <button class="modal-submit" onclick="submitBooking()">Confirm Appointment Request</button>
+    <div class="modal-div">or reach us directly</div>
+    <a href="https://wa.me/919925542424" target="_blank" class="btn-wa">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Us
+    </a>
+    <p class="modal-note">Follow us: <a href="https://www.instagram.com/anshayurveda/" target="_blank">@anshayurveda</a> on Instagram</p>
+  </div>
+</div>
+
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',scrollY>20)})
+function goHome(){showPage('home');document.getElementById('nav-home').classList.add('active');document.getElementById('nav-treatments').classList.remove('active')}
+function goTreatments(){showPage('treatments');document.getElementById('nav-treatments').classList.add('active');document.getElementById('nav-home').classList.remove('active')}
+function showPage(n){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-'+n).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});closeMenu()}
+function goSec(id){goHome();setTimeout(()=>{const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'})},120)}
+function toggleMenu(){document.getElementById('navbar').classList.toggle('menu-open')}
+function closeMenu(){document.getElementById('navbar').classList.remove('menu-open')}
+function openModal(){document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow=''}
+function submitBooking(){alert('Thank you! Your appointment request has been received.\n\nDr. Jaishree\'s team will confirm within 2 hours.\n\nFor immediate booking:\nCall: 099255 42424\nWhatsApp: +91 99255 42424\nInstagram: @anshayurveda');closeModal()}
+function filterT(cat,btn){document.querySelectorAll('.fb').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.tl').forEach(c=>{const cats=c.dataset.cat||'';c.style.display=(cat==='all'||cats.includes(cat))?'':'none'})}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()})
+</script>
+</body>
+</html>
